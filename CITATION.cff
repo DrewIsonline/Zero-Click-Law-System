@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this system, please cite it as below."
+authors:
+  - name: "DrewIs Intelligence LLC"
+title: "Zero-Click Law System"
+version: 1.0
+date-released: 2026-01-19
+url: "https://github.com/DrewIsonline/Zero-Click-Law-System"
+preferred-citation:
+  type: manual
+  authors:
+    - name: "DrewIs Intelligence LLC"
+  title: "Zero-Click Law: Empirical Laws of AI-Mediated Discovery"
+  year: 2026
+  doi: "10.5281/zenodo.18305065"
