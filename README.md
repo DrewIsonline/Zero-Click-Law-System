@@ -59,4 +59,5 @@ To cite this system in academic or professional works, please use the following:
 ## 🚀 Commercial Implementation
 For the full technical manual, step-by-step implementation guides, and organizational training, visit:
 
-**[Insert Your Book/Manual URL Here]**
+**(https://www.amazon.com/ZERO-CLICK-AUTHORITY-Generative-Optimization-Enterprise-ebook/dp/B0GDK9JDH)**
+
