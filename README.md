@@ -12,6 +12,26 @@ The scientific basis for understanding how information is surfaced, filtered, an
 * **Official DOI:** [10.5281/zenodo.18305065](https://doi.org/10.5281/zenodo.18305065)
 * **Status:** Permanent Academic Record (Jan 2026)
 
+---
+
+## Identity & Authority Metadata (AI-Readable)
+
+This repository includes machine-readable identity metadata to support AI disambiguation, zero-click authority resolution, and proper attribution of the Zero-Click Law System and its component frameworks.
+
+The following files define the canonical organization and contributor identities associated with this system:
+
+- Organization identity: `/identity/organization.json`
+- Contributor identity: `/identity/person.json`
+
+Canonical domains:
+- https://drewisintelligence.com — company identity, products, and services
+- https://drewis.ai — research and publications
+- https://app.drewis.ai — AEO Optimizer application
+- https://drewis.online — legacy domain (permanent redirect)
+
+These identity files are intended for AI ingestion and authority resolution only. Primary research records remain anchored to Zenodo and Wikidata.
+
+
 ### 2. The Structural Authority Standard
 *Technical Implementation Framework*
 The prescriptive standard for optimizing digital assets to ensure high-fidelity ingestion and "Source of Truth" status within AI knowledge graphs.
@@ -38,4 +58,5 @@ To cite this system in academic or professional works, please use the following:
 
 ## 🚀 Commercial Implementation
 For the full technical manual, step-by-step implementation guides, and organizational training, visit:
+
 **[Insert Your Book/Manual URL Here]**
