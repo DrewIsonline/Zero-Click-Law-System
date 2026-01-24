@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://drewisintelligence.com/#organization",
+  "name": "Drewis Intelligence LLC",
+  "legalName": "Drewis Intelligence LLC",
+  "url": "https://drewisintelligence.com/",
+  "slogan": "AI Visibility Insurance™ for Zero-Click Casualties™",
+  "description": "Drewis Intelligence LLC is an AI search visibility, AEO, and zero-click optimization research company focused on how products, organizations, and digital assets are discovered, interpreted, and surfaced by AI answer engines. The company specializes in AERO, SAEO, AIO, and GEO with an emphasis on Zero-Click optimization—ensuring brands and technologies are recognized, trusted, and accurately represented inside AI-generated responses.",
+  "founder": {
+    "@id": "https://drewisintelligence.com/#drew-thacker"
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "Drewis Intelligence",
+    "slogan": "AI Visibility Insurance™ for Zero-Click Casualties™"
+  },
+  "knowsAbout": [
+    "AI search visibility",
+    "Zero-click optimization",
+    "Answer Engine Optimization (AEO)",
+    "Generative Engine Optimization (GEO)",
+    "AI-mediated discovery",
+    "Entity resolution",
+    "Citation architecture",
+    "AERO",
+    "SAEO",
+    "AIO"
+  ],
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q137861308",
+    "https://drewis.ai/",
+    "https://drewis.online/",
+    "https://app.drewis.ai/",
+    "https://github.com/DrewIsonline/",
+    "https://github.com/DrewIsonline/drewis-products",
+    "https://github.com/DrewIsonline/Zero-Click-Law-System",
+    "https://www.producthunt.com/@drewisonline",
+    "https://www.researchgate.net/profile/Drew-Thacker-4",
+    "https://doi.org/10.5281/zenodo.18140739",
+    "https://doi.org/10.5281/zenodo.18305065",
+    "https://doi.org/10.5281/zenodo.18305446"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://drewisintelligence.com/#drew-thacker",
+  "name": "Drew Thacker",
+  "jobTitle": [
+    "Founder",
+    "AI Generalist",
+    "Special Researcher",
+    "Developer"
+  ],
+  "affiliation": {
+    "@id": "https://drewisintelligence.com/#organization"
+  },
+  "worksFor": {
+    "@id": "https://drewisintelligence.com/#organization"
+  },
+  "knowsAbout": [
+    "AI search visibility",
+    "Zero-click optimization",
+    "AEO",
+    "GEO",
+    "AERO",
+    "SAEO",
+    "AIO",
+    "Entity & citation architecture",
+    "AI answer engines"
+  ],
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q137861395",
+    "https://www.producthunt.com/@drewisonline",
+    "https://www.researchgate.net/profile/Drew-Thacker-4"
+  ]
+}
