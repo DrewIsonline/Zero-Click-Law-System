@@ -1,0 +1,133 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "Collection",
+  "version": "1.0.0",
+  "dateModified": "2026-01-26",
+  "name": "DrewIs Intelligence LLC - Pricing",
+  "description": "Pricing information for professional services offered by DrewIs Intelligence LLC.",
+  "provider": {
+    "@id": "https://drewisintelligence.com/#organization"
+  },
+  "hasPart": [
+    {
+      "@type": "Offer",
+      "name": "AEO/GEO Consulting",
+      "category": "Consulting",
+      "priceSpecification": [
+        {
+          "@type": "UnitPriceSpecification",
+          "name": "Initial Consultation",
+          "price": "200.00",
+          "priceCurrency": "USD",
+          "unitText": "hour"
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          "name": "Implementation Guidance",
+          "price": "250.00",
+          "priceCurrency": "USD",
+          "unitText": "hour"
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          "name": "Executive Strategy",
+          "price": "350.00",
+          "priceCurrency": "USD",
+          "unitText": "hour"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Product Optimization",
+      "category": "Implementation",
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "name": "Small Catalog (1-5 products)",
+          "price": "2500.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Medium Catalog (6-20 products)",
+          "price": "5000.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Large Catalog (21+ products)",
+          "minPrice": "7500.00",
+          "priceCurrency": "USD"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Website Implementation",
+      "category": "Implementation",
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "name": "Small Site (5-15 pages)",
+          "price": "5000.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Medium Site (16-50 pages)",
+          "price": "8000.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Large Site (51-100 pages)",
+          "price": "12000.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Enterprise Site (100+ pages)",
+          "minPrice": "15000.00",
+          "priceCurrency": "USD"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Done-For-You Agency Services",
+      "category": "Retainer",
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "name": "Small Business",
+          "price": "3000.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Mid-Market",
+          "price": "5000.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Growth Company",
+          "price": "7500.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        },
+        {
+          "@type": "PriceSpecification",
+          "name": "Enterprise",
+          "minPrice": "10000.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        }
+      ]
+    }
+  ]
+}

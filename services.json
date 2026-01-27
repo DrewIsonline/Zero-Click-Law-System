@@ -1,0 +1,54 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "Collection",
+  "version": "1.0.0",
+  "dateModified": "2026-01-26",
+  "name": "DrewIs Intelligence LLC - Services",
+  "description": "A collection of professional services offered by DrewIs Intelligence LLC for AI-mediated discovery and generative engine optimization.",
+  "provider": {
+    "@id": "https://drewisintelligence.com/#organization"
+  },
+  "hasPart": [
+    {
+      "@type": "Service",
+      "serviceType": "AEO/GEO Consulting",
+      "name": "AEO/GEO Consulting",
+      "description": "Strategic guidance on implementing AI Engine Optimization and Generative Engine Optimization for your business. Hourly or project-based consulting.",
+      "provider": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "url": "https://drewisintelligence.com/services"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Product Optimization",
+      "name": "Product Optimization",
+      "description": "Complete optimization of your products for AI discovery. We handle schema markup, zero-click cards, and implementation—delivered ready to deploy.",
+      "provider": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "url": "https://drewisintelligence.com/services"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Website Implementation",
+      "name": "Website Implementation",
+      "description": "Full website audit and optimization strategy. We analyze your site and provide actionable implementation plans for AEO/GEO compliance.",
+      "provider": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "url": "https://drewisintelligence.com/services"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Done-For-You Agency Services",
+      "name": "Done-For-You Agency Services",
+      "description": "Complete hands-off implementation. We optimize your entire digital presence—websites, products, and content—for AI search engines.",
+      "provider": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "url": "https://drewisintelligence.com/services"
+    }
+  ]
+}

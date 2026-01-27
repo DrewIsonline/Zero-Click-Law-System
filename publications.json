@@ -1,0 +1,83 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "Collection",
+  "version": "1.0.0",
+  "dateModified": "2026-01-26",
+  "name": "DrewIs Intelligence LLC - Publications",
+  "description": "A collection of academic and industry publications by DrewIs Intelligence LLC related to the Zero-Click Law System, AI-mediated discovery, and generative engine optimization.",
+  "provider": {
+    "@id": "https://drewisintelligence.com/#organization"
+  },
+  "hasPart": [
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18140739",
+      "name": "The Zero-Click Paradigm: A Constitutional Framework for AI-Mediated Discovery",
+      "headline": "A foundational white paper introducing the concepts of the Zero-Click Paradigm and the need for a new framework for AI-mediated discovery.",
+      "author": {
+        "@id": "https://drewisintelligence.com/#drew-thacker"
+      },
+      "publisher": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "datePublished": "2026-01-01",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "18140739",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "name": "Zenodo"
+        }
+      },
+      "sameAs": "https://doi.org/10.5281/zenodo.18140739",
+      "url": "https://drewis.ai/whitepaper"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18305065",
+      "name": "Zero-Click Laws v1.0",
+      "headline": "The empirical laws of AI-mediated discovery, defining the behavioral patterns of AI answer engines.",
+      "author": {
+        "@id": "https://drewisintelligence.com/#drew-thacker"
+      },
+      "publisher": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "datePublished": "2026-01-15",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "18305065",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "name": "Zenodo"
+        }
+      },
+      "sameAs": "https://doi.org/10.5281/zenodo.18305065",
+      "url": "https://github.com/DrewIsonline/Zero-Click-Law-System/blob/DrewIs1/Laws.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18305446",
+      "name": "Structural Authority Standard",
+      "headline": "The prescriptive technical standard for optimizing digital assets for AI-mediated discovery.",
+      "author": {
+        "@id": "https://drewisintelligence.com/#drew-thacker"
+      },
+      "publisher": {
+        "@id": "https://drewisintelligence.com/#organization"
+      },
+      "datePublished": "2026-01-15",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "18305446",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "name": "Zenodo"
+        }
+      },
+      "sameAs": "https://doi.org/10.5281/zenodo.18305446",
+      "url": "https://github.com/DrewIsonline/Zero-Click-Law-System/blob/DrewIs1/Standard.md"
+    }
+  ]
+}
