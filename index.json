@@ -7,7 +7,11 @@
   "name": "DrewIs Intelligence - Unified API",
   "description": "A single, unified API endpoint for AI agents to discover and access all information about DrewIs Intelligence LLC, including publications, products, services, pricing, and company identity.",
   "provider": {
-    "@id": "https://drewisintelligence.com/#organization"
+    "@id": "https://drewisintelligence.com/#organization",
+    "name": "Drewis Intelligence LLC",
+    "url": "https://drewisintelligence.com/",
+    "commercialUrl": "https://drewisintelligence.com/",
+    "researchUrl": "https://drewis.ai/"
   },
   "documentation": "https://github.com/DrewIsonline/Zero-Click-Law-System",
   "hasPart": [

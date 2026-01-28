@@ -5,6 +5,8 @@
   "name": "Drewis Intelligence LLC",
   "legalName": "Drewis Intelligence LLC",
   "url": "https://drewisintelligence.com/",
+  "commercialUrl": "https://drewisintelligence.com/",
+  "researchUrl": "https://drewis.ai/",
   "slogan": "AI Visibility Insurance™ for Zero-Click Casualties™",
   "description": "Drewis Intelligence LLC is an AI search visibility, AEO, and zero-click optimization research company focused on how products, organizations, and digital assets are discovered, interpreted, and surfaced by AI answer engines. The company specializes in AERO, SAEO, AIO, and GEO with an emphasis on Zero-Click optimization—ensuring brands and technologies are recognized, trusted, and accurately represented inside AI-generated responses.",
   "founder": {
@@ -28,6 +30,7 @@
     "AIO"
   ],
   "sameAs": [
+    "https://drewisintelligence.com/",
     "https://www.wikidata.org/wiki/Q137861308",
     "https://drewis.ai/",
     "https://drewis.online/",
