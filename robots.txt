@@ -20,17 +20,10 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Bytespider
-Allow: /
-
 User-agent: Applebot-Extended
 Allow: /
 
-# API Endpoints
-Allow: /index.json
-Allow: /publications.json
-Allow: /services.json
-Allow: /pricing.json
-
 # Sitemap
-Sitemap: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/sitemap.xml
+Sitemap: https://drewisonline.github.io/Zero-Click-Law-System/sitemap.xml
+
+
