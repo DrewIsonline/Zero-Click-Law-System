@@ -33,4 +33,5 @@ Allow: /services.json
 Allow: /pricing.json
 
 # Sitemap
-Sitemap: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/sitemap.xml
+Sitemap: https://drewisonline.github.io/Zero-Click-Law-System/sitemap.xml
+
