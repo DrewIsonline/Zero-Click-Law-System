@@ -1,4 +1,17 @@
 {
+  "name": "Drew Thacker",
+  "alternateName": "Drew Thompson",
+  "jobTitle": ["Founder", "CEO", "AI Generalist", "Special Researcher", "Developer"],
+  "sameAs": [
+    "Wikidata", "Product Hunt", "ResearchGate",
+    "LinkedIn", "YouTube", "Facebook", "Instagram", 
+    "Reddit", "GitHub", "Google Dev"
+  ],
+  "email": ["Drew@drewis.online", "dtrader.23@hotmail.com"],
+  "author": [All 3 DOI publications],
+  "knowsAbout": [14 expertise areas with full names]
+},
+{
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://drewisintelligence.com/#drew-thacker",
@@ -32,3 +45,4 @@
     "https://www.researchgate.net/profile/Drew-Thacker-4"
   ]
 }
+
