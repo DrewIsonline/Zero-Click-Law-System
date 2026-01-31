@@ -2,21 +2,39 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://drewisintelligence.com/#organization",
-  "name": "Drewis Intelligence LLC",
-  "legalName": "Drewis Intelligence LLC",
+  "name": "DrewIs Intelligence LLC",
+  "legalName": "DrewIs Intelligence LLC",
   "url": "https://drewisintelligence.com/",
+  "logo": "https://app.drewis.ai/logo-square.png",
   "commercialUrl": "https://drewisintelligence.com/",
   "researchUrl": "https://drewis.ai/",
   "slogan": "AI Visibility Insurance™ for Zero-Click Casualties™",
-  "description": "Drewis Intelligence LLC is an AI search visibility, AEO, and zero-click optimization research company focused on how products, organizations, and digital assets are discovered, interpreted, and surfaced by AI answer engines. The company specializes in AERO, SAEO, AIO, and GEO with an emphasis on Zero-Click optimization—ensuring brands and technologies are recognized, trusted, and accurately represented inside AI-generated responses.",
+  "description": "DrewIs Intelligence LLC is an AI search visibility, AEO, and zero-click optimization research company focused on how products, organizations, and digital assets are discovered, interpreted, and surfaced by AI answer engines. The company specializes in AERO, SAEO, AIO, and GEO with an emphasis on Zero-Click optimization—ensuring brands and technologies are recognized, trusted, and accurately represented inside AI-generated responses.",
   "founder": {
     "@id": "https://drewisintelligence.com/#drew-thacker"
   },
   "brand": {
     "@type": "Brand",
-    "name": "Drewis Intelligence",
+    "name": "DrewIs Intelligence",
     "slogan": "AI Visibility Insurance™ for Zero-Click Casualties™"
   },
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "Microsoft Partner ID",
+      "value": "7008756"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "Google Ads ID",
+      "value": "571-132-1182"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "Core Logic Node",
+      "value": "https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/index.html"
+    }
+  ],
   "knowsAbout": [
     "AI search visibility",
     "Zero-click optimization",
@@ -27,7 +45,8 @@
     "Citation architecture",
     "AERO",
     "SAEO",
-    "AIO"
+    "AIO",
+    "Structural Authority"
   ],
   "sameAs": [
     "https://drewisintelligence.com/",
@@ -43,5 +62,69 @@
     "https://doi.org/10.5281/zenodo.18140739",
     "https://doi.org/10.5281/zenodo.18305065",
     "https://doi.org/10.5281/zenodo.18305446"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18140739",
+      "name": "The Zero-Click Paradigm: Navigating the Future of Search and Digital Visibility",
+      "author": {
+        "@type": "Person",
+        "name": "Drew Thacker"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zenodo"
+      },
+      "datePublished": "2025",
+      "url": "https://zenodo.org/records/18140739",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.18140739"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18305065",
+      "name": "Zero-Click Law System (Empirical Framework)",
+      "author": {
+        "@type": "Person",
+        "name": "Drew Thacker"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DrewIs Intelligence LLC"
+      },
+      "datePublished": "2025",
+      "url": "https://zenodo.org/records/18305065",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.18305065"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.18305446",
+      "name": "Structural Authority Standard (Implementation Standard)",
+      "author": {
+        "@type": "Person",
+        "name": "Drew Thacker"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DrewIs Intelligence LLC"
+      },
+      "datePublished": "2025",
+      "url": "https://zenodo.org/records/18305446",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.18305446"
+      }
+    }
   ]
 }
+
+ 
