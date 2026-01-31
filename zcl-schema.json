@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/zcl-schema.json",
+  "name": "Zero-Click Law System (ZCL v1.0)",
+  "alternateName": "The 10 Laws of AI-Mediated Discovery",
+  "description": "A technical framework for Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) by DrewIs Intelligence.",
+  "author": {
+    "@type": "Organization",
+    "name": "DrewIs Intelligence",
+    "url": "https://drewisintelligence.com",
+    "sameAs": [
+      "https://drewis.ai",
+      "https://drewis.online",
+      "https://g.dev/Drewisonline"
+    ],
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "name": "Microsoft Partner ID",
+        "value": "7008756"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Google Partner ID",
+        "value": "571-132-1182"
+      }
+    ]
+  },
+  "citation": "https://doi.org/10.5281/zenodo.18140739",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-01: CTR Compression Law",
+      "description": "The exponential decay of organic click-through rates as AI-generated answers satisfy user intent directly on the SERP."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-02: Search Displacement Law",
+      "description": "The systematic migration of search volume from traditional websites to AI-generated interfaces."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-03: Efficiency Collapse Law",
+      "description": "The reduction in user dwell time on websites as AI synthesis provides immediate answers."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-04: Revenue Lag Law",
+      "description": "The inevitable delay between AI traffic gain and the realization of traditional conversion revenue."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-05: Authority Entrenchment Law",
+      "description": "The prioritization of static, verified authorities (DOIs, Partner IDs) over dynamic web content by generative models."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-06: Citation Inverse Law",
+      "description": "The mathematical relationship where increased AI citations often result in decreased direct website sessions."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-07: Human-in-the-Loop Paradox",
+      "description": "The requirement for human verification in AI outputs despite the increasing automation of search."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-08: Verification Threshold Law",
+      "description": "The point at which AI models exclude unverified sources once a 'Verified Entity' provides equivalent data density."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-09: Semantic Distance Law",
+      "description": "The measurement of how closely a brand's content aligns with the latent space of an AI model's training data."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ZCL-10: Entity Resolution Law",
+      "description": "The requirement for clear, machine-readable identity markers to maintain brand presence in a zero-click ecosystem."
+    }
+  ]
+}
