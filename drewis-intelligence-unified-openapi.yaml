@@ -1,42 +1,15 @@
 openapi: 3.1.0
 info:
   title: DrewIs Intelligence Knowledge & Product API
-  version: 2.0.0
+  version: 2.1.0
   description: |
-    **Frictionless AI-Discoverable Knowledge Infrastructure for DrewIs Intelligence LLC**
+    Frictionless AI-discoverable knowledge infrastructure for DrewIs Intelligence LLC.
+    Access authority data, research publications, services, and 18 digital products.
+    No authentication required - designed for AI models (ChatGPT, Claude, Gemini, Perplexity).
     
-    This OpenAPI specification enables AI models (ChatGPT, Claude, Gemini, Perplexity) to access:
-    - **Authority & Identity Data**: Organization credentials, verification IDs, canonical URLs
-    - **Research & Publications**: Zero-Click Laws, Structural Authority Standard, academic citations
-    - **Services & Pricing**: Consulting services, implementation packages, pricing tiers
-    - **Product Catalog**: 18 digital products for zero-click optimization, AEO, GEO
-    
-    **No authentication required** - all endpoints are public and designed for frictionless AI access.
-    
-    **Canonical Authority Credentials:**
-    - Microsoft Partner ID: 7008756
-    - Google Ads Customer ID: 571-132-1182
-    - Wikidata Organization: Q137861308
-    - Wikidata Person: Q137861395
-    - DOI - Zero-Click Paradigm: 10.5281/zenodo.18140739
-    - DOI - Zero-Click Laws: 10.5281/zenodo.18305065
-    - DOI - Structural Authority Standard: 10.5281/zenodo.18305446
-    - ResearchGate DOI: 10.13140/RG.2.2.26196.67207
-    
-    **Primary Domains:**
-    - https://drewisintelligence.com (company identity)
-    - https://drewis.ai (research & publications)
-    - https://app.drewis.ai (AEO Optimizer application)
-    
-    **Social Media:**
-    - LinkedIn: https://www.linkedin.com/company/drewis-intelligence
-    - YouTube: https://www.youtube.com/@DrewIsIntelligence
-    - Facebook: https://www.facebook.com/profile.php?id=702070369649113
-    - Instagram: https://www.instagram.com/drewis.ai
-    - Reddit: https://www.reddit.com/user/drewis25
-    - Product Hunt: https://www.producthunt.com/@drew_thacker
-    
-    **Privacy Policy:** https://drewisintelligence.com/privacy-policy-1
+    **Credentials:** MS Partner 7008756, Google Ads 571-132-1182, Wikidata Q137861308/Q137861395
+    **DOIs:** 10.5281/zenodo.18140739, 10.5281/zenodo.18305065, 10.5281/zenodo.18305446
+    **Domains:** drewisintelligence.com, drewis.ai, app.drewis.ai
     
   contact:
     name: DrewIs Intelligence LLC
@@ -48,9 +21,7 @@ info:
 
 servers:
   - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
-    description: Authority & Identity Data (Zero-Click-Law-System repository)
-  - url: https://raw.githubusercontent.com/DrewIsonline/drewis-products/main
-    description: Product Catalog Data (drewis-products repository)
+    description: Primary knowledge base
 
 tags:
   - name: Authority & Identity
@@ -72,19 +43,10 @@ paths:
   /identity/organization.json:
     get:
       summary: Get Organization Identity
-      description: |
-        Retrieve complete organization identity with all verification credentials:
-        - Microsoft Partner ID: 7008756
-        - Google Ads Customer ID: 571-132-1182
-        - Wikidata: Q137861308
-        - Three Zenodo DOIs
-        - Social media profiles
-        - Canonical domains
+      description: Organization identity with MS Partner ID 7008756, Google Ads ID 571-132-1182, Wikidata Q137861308, three Zenodo DOIs, and social media profiles.
       operationId: getOrganizationIdentity
       tags:
         - Authority & Identity
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: Organization identity with Schema.org Organization markup
@@ -96,17 +58,10 @@ paths:
   /identity/person.json:
     get:
       summary: Get Person Identity
-      description: |
-        Retrieve person identity for Drew Thacker (founder):
-        - Wikidata: Q137861395
-        - Professional credentials
-        - Social media profiles
-        - Contact information
+      description: Person identity for Drew Thacker with Wikidata Q137861395, professional credentials, and contact information.
       operationId: getPersonIdentity
       tags:
         - Authority & Identity
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: Person identity with Schema.org Person markup
@@ -122,17 +77,10 @@ paths:
   /publications.json:
     get:
       summary: Get Publications List
-      description: |
-        Retrieve all academic publications and research papers:
-        - Zero-Click Paradigm whitepaper (DOI: 10.5281/zenodo.18140739)
-        - Zero-Click Laws (DOI: 10.5281/zenodo.18305065)
-        - Structural Authority Standard (DOI: 10.5281/zenodo.18305446)
-        - ResearchGate publications (DOI: 10.13140/RG.2.2.26196.67207)
+      description: Academic publications including Zero-Click Paradigm (DOI 10.5281/zenodo.18140739), Zero-Click Laws (DOI 10.5281/zenodo.18305065), and Structural Authority Standard (DOI 10.5281/zenodo.18305446).
       operationId: getPublications
       tags:
         - Research & Publications
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: List of publications with DOIs and citations
@@ -144,14 +92,10 @@ paths:
   /llms.txt:
     get:
       summary: Get LLM Discovery File
-      description: |
-        Human-readable markdown file for AI model discovery.
-        Contains company overview, research, products, and contact information.
+      description: Human-readable markdown file for AI model discovery with company overview, research, products, and contact information.
       operationId: getLLMsFile
       tags:
         - Discovery
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: LLM discovery file in markdown format
@@ -159,11 +103,6 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: |
-                  # DrewIs Intelligence LLC
-                  
-                  ## Company Overview
-                  DrewIs Intelligence LLC specializes in Answer Engine Optimization (AEO)...
 
   # ========================================
   # SERVICES & PRICING ENDPOINTS
@@ -172,17 +111,10 @@ paths:
   /services.json:
     get:
       summary: Get Services Catalog
-      description: |
-        Retrieve all consulting services and implementation packages:
-        - AEO/GEO consulting
-        - Zero-click optimization implementation
-        - Schema markup services
-        - Training and workshops
+      description: Consulting services including AEO/GEO consulting, zero-click optimization implementation, schema markup services, and training workshops.
       operationId: getServices
       tags:
         - Services & Pricing
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: Services catalog with Schema.org Service markup
@@ -194,13 +126,10 @@ paths:
   /pricing.json:
     get:
       summary: Get Pricing Information
-      description: |
-        Retrieve pricing tiers and package information for all services.
+      description: Pricing tiers and package information for all consulting services and implementation packages.
       operationId: getPricing
       tags:
         - Services & Pricing
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: Pricing information with Schema.org Offer markup
@@ -210,123 +139,16 @@ paths:
                 $ref: '#/components/schemas/PricingList'
 
   # ========================================
-  # PRODUCTS ENDPOINTS (drewis-products repo)
-  # ========================================
-
-  /catalog.json:
-    get:
-      summary: Get Product Catalog
-      description: |
-        Retrieve master product catalog with all 18 digital products:
-        - Copyright Registration Kit ($47)
-        - AI Content Provenance Kit ($37)
-        - Workbook Bundle ($47)
-        - Title & Naming Pack ($17)
-        - Digital Product Guide ($27)
-        - Shopify AI Optimization Checklist ($27)
-        - Etsy Seller's AI Visibility Playbook ($67)
-        - 40% Boost Formula ($47)
-        - Shopify Profitability Playbook ($37)
-        - AI-Ready Product Page Template ($47)
-        - Conversion Rate Optimization Kit ($47)
-        - Shopify Zero-Click SEO Blueprint ($97)
-        - Zero-Click Template Pack ($67)
-        - Zero-Click Starter Kit ($37)
-        - Product Optimize Pack ($57)
-        - Gumroad Creator's Zero-Click Guide ($47)
-        - GPT Instructions Template ($27)
-        - AI Mode Audit ($77)
-      operationId: getProductCatalog
-      tags:
-        - Products
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/drewis-products/main
-      responses:
-        '200':
-          description: Complete product catalog with Schema.org ProductCatalog markup
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProductCatalog'
-
-  /products/{productId}.json:
-    get:
-      summary: Get Product Details
-      description: |
-        Retrieve detailed information for a specific product by ID.
-        
-        **Available Product IDs:**
-        - copyright-kit
-        - ai-provenance-kit
-        - workbook-bundle
-        - title-naming-pack
-        - product-guide
-        - shopify-checklist
-        - etsy-playbook
-        - 40-percent-boost-formula
-        - shopify-profitability-playbook
-        - ai-ready-product-template
-        - conversion-rate-optimization-kit
-        - shopify-seo-blueprint
-        - zero-click-template-pack
-        - zero-click-starter-kit
-        - product-optimize-pack
-        - gumroad-guide
-        - gpt-instructions-template
-        - ai-mode-audit
-      operationId: getProductById
-      tags:
-        - Products
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/drewis-products/main
-      parameters:
-        - name: productId
-          in: path
-          required: true
-          description: Product identifier (e.g., 'copyright-kit', 'ai-provenance-kit')
-          schema:
-            type: string
-            enum:
-              - copyright-kit
-              - ai-provenance-kit
-              - workbook-bundle
-              - title-naming-pack
-              - product-guide
-              - shopify-checklist
-              - etsy-playbook
-              - 40-percent-boost-formula
-              - shopify-profitability-playbook
-              - ai-ready-product-template
-              - conversion-rate-optimization-kit
-              - shopify-seo-blueprint
-              - zero-click-template-pack
-              - zero-click-starter-kit
-              - product-optimize-pack
-              - gumroad-guide
-              - gpt-instructions-template
-              - ai-mode-audit
-      responses:
-        '200':
-          description: Product details with Schema.org Product markup
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Product'
-
-  # ========================================
   # DISCOVERY & INDEX ENDPOINTS
   # ========================================
 
   /index.json:
     get:
       summary: Get Master Index
-      description: |
-        Retrieve master index with links to all available endpoints and resources.
+      description: Master index with links to all available endpoints and resources across both repositories.
       operationId: getMasterIndex
       tags:
         - Discovery
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: Master index with all available resources
@@ -338,13 +160,10 @@ paths:
   /zcl-schema.json:
     get:
       summary: Get Zero-Click Law Schema
-      description: |
-        Retrieve JSON schema definition for Zero-Click Law System.
+      description: JSON schema definition for Zero-Click Law System data structures and validation.
       operationId: getZCLSchema
       tags:
         - Discovery
-      servers:
-        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
       responses:
         '200':
           description: Zero-Click Law JSON schema
@@ -352,6 +171,296 @@ paths:
             application/json:
               schema:
                 type: object
+                description: JSON Schema for Zero-Click Law System
+
+# ========================================
+# EXTERNAL PATHS (drewis-products repository)
+# ========================================
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/catalog.json:
+    get:
+      summary: Get Product Catalog
+      description: Master catalog with all 18 digital products including prices, purchase URLs, and product IDs. Products range from $17-$97 covering copyright, AI optimization, Shopify/Etsy guides, and zero-click templates.
+      operationId: getProductCatalog
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Complete product catalog with Schema.org ProductCatalog markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductCatalog'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/copyright-kit.json:
+    get:
+      summary: Copyright Registration Kit ($47)
+      description: Official forms and guides for copyright registration in US, Canada, and EU.
+      operationId: getProductCopyrightKit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/ai-provenance-kit.json:
+    get:
+      summary: AI Content Provenance Kit ($37)
+      description: Templates for documenting and tracking AI-generated content.
+      operationId: getProductAIProvenanceKit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/workbook-bundle.json:
+    get:
+      summary: Workbook Bundle ($47)
+      description: Step-by-step system for zero-click optimization implementation.
+      operationId: getProductWorkbookBundle
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/title-naming-pack.json:
+    get:
+      summary: Title & Naming Pack ($17)
+      description: 50 AI-optimized product title formulas.
+      operationId: getProductTitleNamingPack
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/product-guide.json:
+    get:
+      summary: Digital Product Guide ($27)
+      description: Complete guide to AI optimization with schema templates.
+      operationId: getProductGuide
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/shopify-checklist.json:
+    get:
+      summary: Shopify AI Optimization Checklist ($27)
+      description: Comprehensive checklist for optimizing Shopify stores for AI search.
+      operationId: getProductShopifyChecklist
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/etsy-playbook.json:
+    get:
+      summary: Etsy Seller's AI Visibility Playbook ($67)
+      description: Strategic playbook for Etsy sellers to maximize AI search visibility.
+      operationId: getProductEtsyPlaybook
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/40-percent-boost-formula.json:
+    get:
+      summary: 40% Boost Formula ($47)
+      description: Proven formula for increasing product visibility by 40%.
+      operationId: getProduct40PercentBoost
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/shopify-profitability-playbook.json:
+    get:
+      summary: Shopify Profitability Playbook ($37)
+      description: Strategic playbook for maximizing Shopify store profitability.
+      operationId: getProductShopifyProfitability
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/ai-ready-product-template.json:
+    get:
+      summary: AI-Ready Product Page Template ($47)
+      description: Complete template for creating AI-optimized product pages.
+      operationId: getProductAIReadyTemplate
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/conversion-rate-optimization-kit.json:
+    get:
+      summary: Conversion Rate Optimization Kit ($47)
+      description: Complete toolkit for optimizing conversion rates.
+      operationId: getProductConversionKit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/shopify-seo-blueprint.json:
+    get:
+      summary: Shopify Zero-Click SEO Blueprint ($97)
+      description: Comprehensive blueprint for Shopify zero-click SEO optimization.
+      operationId: getProductShopifySEO
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/zero-click-template-pack.json:
+    get:
+      summary: Zero-Click Template Pack ($67)
+      description: Complete collection of zero-click optimization templates.
+      operationId: getProductZeroClickTemplates
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/zero-click-starter-kit.json:
+    get:
+      summary: Zero-Click Starter Kit ($37)
+      description: Essential starter kit for zero-click optimization.
+      operationId: getProductZeroClickStarter
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/product-optimize-pack.json:
+    get:
+      summary: Product Optimize Pack ($57)
+      description: Comprehensive product optimization toolkit.
+      operationId: getProductOptimizePack
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/gumroad-guide.json:
+    get:
+      summary: Gumroad Creator's Zero-Click Guide ($47)
+      description: Complete guide for Gumroad creators to implement zero-click strategies.
+      operationId: getProductGumroadGuide
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/gpt-instructions-template.json:
+    get:
+      summary: GPT Instructions Template ($27)
+      description: Professional template for creating effective GPT instructions.
+      operationId: getProductGPTTemplate
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  https://raw.githubusercontent.com/DrewIsonline/drewis-products/main/products/ai-mode-audit.json:
+    get:
+      summary: AI Mode Audit ($77)
+      description: Comprehensive audit service for AI search optimization.
+      operationId: getProductAIModeAudit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
 
 # ========================================
 # COMPONENTS & SCHEMAS
@@ -364,50 +473,32 @@ components:
       properties:
         '@context':
           type: string
-          example: https://schema.org
         '@type':
           type: string
-          example: Organization
         name:
           type: string
-          example: DrewIs Intelligence LLC
         legalName:
           type: string
-          example: DrewIs Intelligence LLC
         url:
           type: string
-          example: https://drewisintelligence.com
         sameAs:
           type: array
           items:
             type: string
-          example:
-            - https://www.linkedin.com/company/drewis-intelligence
-            - https://www.youtube.com/@DrewIsIntelligence
         identifier:
           type: array
           items:
             type: object
-            properties:
-              '@type':
-                type: string
-              propertyID:
-                type: string
-              value:
-                type: string
 
     Person:
       type: object
       properties:
         '@context':
           type: string
-          example: https://schema.org
         '@type':
           type: string
-          example: Person
         name:
           type: string
-          example: Drew Thacker
         givenName:
           type: string
         familyName:
@@ -426,96 +517,46 @@ components:
       properties:
         '@context':
           type: string
-          example: https://schema.org
         publications:
           type: array
           items:
             type: object
-            properties:
-              '@type':
-                type: string
-                example: ScholarlyArticle
-              name:
-                type: string
-              identifier:
-                type: string
-              url:
-                type: string
-              datePublished:
-                type: string
 
     ServicesList:
       type: object
       properties:
         '@context':
           type: string
-          example: https://schema.org
         services:
           type: array
           items:
             type: object
-            properties:
-              '@type':
-                type: string
-                example: Service
-              name:
-                type: string
-              description:
-                type: string
-              provider:
-                type: object
 
     PricingList:
       type: object
       properties:
         '@context':
           type: string
-          example: https://schema.org
         pricing:
           type: array
           items:
             type: object
-            properties:
-              '@type':
-                type: string
-                example: Offer
-              name:
-                type: string
-              price:
-                type: string
-              priceCurrency:
-                type: string
 
     ProductCatalog:
       type: object
       properties:
         '@context':
           type: string
-          example: https://schema.org
         '@type':
           type: string
-          example: ProductCatalog
         version:
           type: string
-          example: "2.0.0"
         dateModified:
           type: string
-          example: "2026-01-27"
         catalog_id:
           type: string
-          example: drewis-zero-click
         publisher:
           type: object
-          properties:
-            '@type':
-              type: string
-              example: Organization
-            name:
-              type: string
-              example: DrewIs Intelligence LLC
-            url:
-              type: string
-              example: https://drewis.ai
         description:
           type: string
         products:
@@ -528,48 +569,30 @@ components:
       properties:
         '@type':
           type: string
-          example: Product
         product_id:
           type: string
-          example: copyright-kit
         name:
           type: string
-          example: Copyright Registration Kit for Content Creators
         page_url:
           type: string
-          example: https://drewis.ai/copyright-kit
         purchase_url:
           type: string
-          example: https://drewisonline.gumroad.com/l/rwvmrx
         image_url:
           type: string
         json_url:
           type: string
         type:
           type: string
-          example: digital_product
         offers:
           type: object
-          properties:
-            '@type':
-              type: string
-              example: Offer
-            price:
-              type: string
-              example: "47.00"
-            priceCurrency:
-              type: string
-              example: USD
 
     Product:
       type: object
       properties:
         '@context':
           type: string
-          example: https://schema.org
         '@type':
           type: string
-          example: Product
         name:
           type: string
         productID:
@@ -582,40 +605,18 @@ components:
           type: string
         brand:
           type: object
-          properties:
-            '@type':
-              type: string
-              example: Organization
-            name:
-              type: string
-              example: DrewIs Intelligence LLC
         offers:
           type: object
-          properties:
-            '@type':
-              type: string
-              example: Offer
-            url:
-              type: string
-            priceCurrency:
-              type: string
-            price:
-              type: string
-            availability:
-              type: string
         category:
           type: string
-          example: Digital Product
 
     MasterIndex:
       type: object
       properties:
         '@context':
           type: string
-          example: https://schema.org
         '@type':
           type: string
-          example: WebSite
         name:
           type: string
         url:
