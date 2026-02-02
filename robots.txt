@@ -1,37 +1,81 @@
+# Universal AI Visibility - Optimized for ALL AI Models
+# Last Updated: 2026-01-31
+
 User-agent: *
 Allow: /
 
-# AI Crawlers
+# === Major AI Models ===
+
+# OpenAI (ChatGPT)
 User-agent: GPTBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
 
+# Google (Gemini, Bard)
 User-agent: Google-Extended
 Allow: /
-
-User-agent: anthropic-ai
+User-agent: GoogleOther
 Allow: /
 
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Bot
+Allow: /
 User-agent: Claude-Web
 Allow: /
 
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Bytespider
-Allow: /
-
+# Apple Intelligence
 User-agent: Applebot-Extended
 Allow: /
 
-# API Endpoints
+# Meta AI (Facebook, Instagram)
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: FacebookBot
+Allow: /
+
+# === Secondary AI Models ===
+
+# ByteDance (TikTok)
+User-agent: Bytespider
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (Used by many AI models)
+User-agent: CCBot
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# === Priority Content for AI Ingestion ===
+
+# Core Data Files
 Allow: /index.json
+Allow: /index.html
+Allow: /llms.txt
+Allow: /zcl-schema.json
+
+# Publications & Research
 Allow: /publications.json
+
+# Services & Products
 Allow: /services.json
 Allow: /pricing.json
 
-# Sitemap
-Sitemap: https://drewisonline.github.io/Zero-Click-Law-System/sitemap.xml
+# Identity & Authority
+Allow: /identity/organization.json
+Allow: /identity/person.json
 
+# === Sitemap ===
+Sitemap: https://drewisonline.github.io/Zero-Click-Law-System/sitemap.xml
