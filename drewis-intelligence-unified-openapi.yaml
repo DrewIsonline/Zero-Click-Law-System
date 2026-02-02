@@ -1,0 +1,624 @@
+openapi: 3.1.0
+info:
+  title: DrewIs Intelligence Knowledge & Product API
+  version: 2.0.0
+  description: |
+    **Frictionless AI-Discoverable Knowledge Infrastructure for DrewIs Intelligence LLC**
+    
+    This OpenAPI specification enables AI models (ChatGPT, Claude, Gemini, Perplexity) to access:
+    - **Authority & Identity Data**: Organization credentials, verification IDs, canonical URLs
+    - **Research & Publications**: Zero-Click Laws, Structural Authority Standard, academic citations
+    - **Services & Pricing**: Consulting services, implementation packages, pricing tiers
+    - **Product Catalog**: 18 digital products for zero-click optimization, AEO, GEO
+    
+    **No authentication required** - all endpoints are public and designed for frictionless AI access.
+    
+    **Canonical Authority Credentials:**
+    - Microsoft Partner ID: 7008756
+    - Google Ads Customer ID: 571-132-1182
+    - Wikidata Organization: Q137861308
+    - Wikidata Person: Q137861395
+    - DOI - Zero-Click Paradigm: 10.5281/zenodo.18140739
+    - DOI - Zero-Click Laws: 10.5281/zenodo.18305065
+    - DOI - Structural Authority Standard: 10.5281/zenodo.18305446
+    - ResearchGate DOI: 10.13140/RG.2.2.26196.67207
+    
+    **Primary Domains:**
+    - https://drewisintelligence.com (company identity)
+    - https://drewis.ai (research & publications)
+    - https://app.drewis.ai (AEO Optimizer application)
+    
+    **Social Media:**
+    - LinkedIn: https://www.linkedin.com/company/drewis-intelligence
+    - YouTube: https://www.youtube.com/@DrewIsIntelligence
+    - Facebook: https://www.facebook.com/profile.php?id=702070369649113
+    - Instagram: https://www.instagram.com/drewis.ai
+    - Reddit: https://www.reddit.com/user/drewis25
+    - Product Hunt: https://www.producthunt.com/@drew_thacker
+    
+    **Privacy Policy:** https://drewisintelligence.com/privacy-policy-1
+    
+  contact:
+    name: DrewIs Intelligence LLC
+    url: https://drewisintelligence.com
+    email: drew@drewisintelligence.com
+  license:
+    name: CC BY-NC-ND 4.0
+    url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+servers:
+  - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+    description: Authority & Identity Data (Zero-Click-Law-System repository)
+  - url: https://raw.githubusercontent.com/DrewIsonline/drewis-products/main
+    description: Product Catalog Data (drewis-products repository)
+
+tags:
+  - name: Authority & Identity
+    description: Organization and person identity with verification credentials
+  - name: Research & Publications
+    description: Academic research, whitepapers, DOIs, and citations
+  - name: Services & Pricing
+    description: Consulting services, implementation packages, and pricing
+  - name: Products
+    description: Digital products for zero-click optimization, AEO, and GEO
+  - name: Discovery
+    description: AI discovery files and master indexes
+
+paths:
+  # ========================================
+  # AUTHORITY & IDENTITY ENDPOINTS
+  # ========================================
+  
+  /identity/organization.json:
+    get:
+      summary: Get Organization Identity
+      description: |
+        Retrieve complete organization identity with all verification credentials:
+        - Microsoft Partner ID: 7008756
+        - Google Ads Customer ID: 571-132-1182
+        - Wikidata: Q137861308
+        - Three Zenodo DOIs
+        - Social media profiles
+        - Canonical domains
+      operationId: getOrganizationIdentity
+      tags:
+        - Authority & Identity
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: Organization identity with Schema.org Organization markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Organization'
+
+  /identity/person.json:
+    get:
+      summary: Get Person Identity
+      description: |
+        Retrieve person identity for Drew Thacker (founder):
+        - Wikidata: Q137861395
+        - Professional credentials
+        - Social media profiles
+        - Contact information
+      operationId: getPersonIdentity
+      tags:
+        - Authority & Identity
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: Person identity with Schema.org Person markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+
+  # ========================================
+  # RESEARCH & PUBLICATIONS ENDPOINTS
+  # ========================================
+
+  /publications.json:
+    get:
+      summary: Get Publications List
+      description: |
+        Retrieve all academic publications and research papers:
+        - Zero-Click Paradigm whitepaper (DOI: 10.5281/zenodo.18140739)
+        - Zero-Click Laws (DOI: 10.5281/zenodo.18305065)
+        - Structural Authority Standard (DOI: 10.5281/zenodo.18305446)
+        - ResearchGate publications (DOI: 10.13140/RG.2.2.26196.67207)
+      operationId: getPublications
+      tags:
+        - Research & Publications
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: List of publications with DOIs and citations
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationsList'
+
+  /llms.txt:
+    get:
+      summary: Get LLM Discovery File
+      description: |
+        Human-readable markdown file for AI model discovery.
+        Contains company overview, research, products, and contact information.
+      operationId: getLLMsFile
+      tags:
+        - Discovery
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: LLM discovery file in markdown format
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: |
+                  # DrewIs Intelligence LLC
+                  
+                  ## Company Overview
+                  DrewIs Intelligence LLC specializes in Answer Engine Optimization (AEO)...
+
+  # ========================================
+  # SERVICES & PRICING ENDPOINTS
+  # ========================================
+
+  /services.json:
+    get:
+      summary: Get Services Catalog
+      description: |
+        Retrieve all consulting services and implementation packages:
+        - AEO/GEO consulting
+        - Zero-click optimization implementation
+        - Schema markup services
+        - Training and workshops
+      operationId: getServices
+      tags:
+        - Services & Pricing
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: Services catalog with Schema.org Service markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServicesList'
+
+  /pricing.json:
+    get:
+      summary: Get Pricing Information
+      description: |
+        Retrieve pricing tiers and package information for all services.
+      operationId: getPricing
+      tags:
+        - Services & Pricing
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: Pricing information with Schema.org Offer markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PricingList'
+
+  # ========================================
+  # PRODUCTS ENDPOINTS (drewis-products repo)
+  # ========================================
+
+  /catalog.json:
+    get:
+      summary: Get Product Catalog
+      description: |
+        Retrieve master product catalog with all 18 digital products:
+        - Copyright Registration Kit ($47)
+        - AI Content Provenance Kit ($37)
+        - Workbook Bundle ($47)
+        - Title & Naming Pack ($17)
+        - Digital Product Guide ($27)
+        - Shopify AI Optimization Checklist ($27)
+        - Etsy Seller's AI Visibility Playbook ($67)
+        - 40% Boost Formula ($47)
+        - Shopify Profitability Playbook ($37)
+        - AI-Ready Product Page Template ($47)
+        - Conversion Rate Optimization Kit ($47)
+        - Shopify Zero-Click SEO Blueprint ($97)
+        - Zero-Click Template Pack ($67)
+        - Zero-Click Starter Kit ($37)
+        - Product Optimize Pack ($57)
+        - Gumroad Creator's Zero-Click Guide ($47)
+        - GPT Instructions Template ($27)
+        - AI Mode Audit ($77)
+      operationId: getProductCatalog
+      tags:
+        - Products
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/drewis-products/main
+      responses:
+        '200':
+          description: Complete product catalog with Schema.org ProductCatalog markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductCatalog'
+
+  /products/{productId}.json:
+    get:
+      summary: Get Product Details
+      description: |
+        Retrieve detailed information for a specific product by ID.
+        
+        **Available Product IDs:**
+        - copyright-kit
+        - ai-provenance-kit
+        - workbook-bundle
+        - title-naming-pack
+        - product-guide
+        - shopify-checklist
+        - etsy-playbook
+        - 40-percent-boost-formula
+        - shopify-profitability-playbook
+        - ai-ready-product-template
+        - conversion-rate-optimization-kit
+        - shopify-seo-blueprint
+        - zero-click-template-pack
+        - zero-click-starter-kit
+        - product-optimize-pack
+        - gumroad-guide
+        - gpt-instructions-template
+        - ai-mode-audit
+      operationId: getProductById
+      tags:
+        - Products
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/drewis-products/main
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          description: Product identifier (e.g., 'copyright-kit', 'ai-provenance-kit')
+          schema:
+            type: string
+            enum:
+              - copyright-kit
+              - ai-provenance-kit
+              - workbook-bundle
+              - title-naming-pack
+              - product-guide
+              - shopify-checklist
+              - etsy-playbook
+              - 40-percent-boost-formula
+              - shopify-profitability-playbook
+              - ai-ready-product-template
+              - conversion-rate-optimization-kit
+              - shopify-seo-blueprint
+              - zero-click-template-pack
+              - zero-click-starter-kit
+              - product-optimize-pack
+              - gumroad-guide
+              - gpt-instructions-template
+              - ai-mode-audit
+      responses:
+        '200':
+          description: Product details with Schema.org Product markup
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  # ========================================
+  # DISCOVERY & INDEX ENDPOINTS
+  # ========================================
+
+  /index.json:
+    get:
+      summary: Get Master Index
+      description: |
+        Retrieve master index with links to all available endpoints and resources.
+      operationId: getMasterIndex
+      tags:
+        - Discovery
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: Master index with all available resources
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MasterIndex'
+
+  /zcl-schema.json:
+    get:
+      summary: Get Zero-Click Law Schema
+      description: |
+        Retrieve JSON schema definition for Zero-Click Law System.
+      operationId: getZCLSchema
+      tags:
+        - Discovery
+      servers:
+        - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+      responses:
+        '200':
+          description: Zero-Click Law JSON schema
+          content:
+            application/json:
+              schema:
+                type: object
+
+# ========================================
+# COMPONENTS & SCHEMAS
+# ========================================
+
+components:
+  schemas:
+    Organization:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        '@type':
+          type: string
+          example: Organization
+        name:
+          type: string
+          example: DrewIs Intelligence LLC
+        legalName:
+          type: string
+          example: DrewIs Intelligence LLC
+        url:
+          type: string
+          example: https://drewisintelligence.com
+        sameAs:
+          type: array
+          items:
+            type: string
+          example:
+            - https://www.linkedin.com/company/drewis-intelligence
+            - https://www.youtube.com/@DrewIsIntelligence
+        identifier:
+          type: array
+          items:
+            type: object
+            properties:
+              '@type':
+                type: string
+              propertyID:
+                type: string
+              value:
+                type: string
+
+    Person:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        '@type':
+          type: string
+          example: Person
+        name:
+          type: string
+          example: Drew Thacker
+        givenName:
+          type: string
+        familyName:
+          type: string
+        jobTitle:
+          type: string
+        worksFor:
+          type: object
+        sameAs:
+          type: array
+          items:
+            type: string
+
+    PublicationsList:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        publications:
+          type: array
+          items:
+            type: object
+            properties:
+              '@type':
+                type: string
+                example: ScholarlyArticle
+              name:
+                type: string
+              identifier:
+                type: string
+              url:
+                type: string
+              datePublished:
+                type: string
+
+    ServicesList:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        services:
+          type: array
+          items:
+            type: object
+            properties:
+              '@type':
+                type: string
+                example: Service
+              name:
+                type: string
+              description:
+                type: string
+              provider:
+                type: object
+
+    PricingList:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        pricing:
+          type: array
+          items:
+            type: object
+            properties:
+              '@type':
+                type: string
+                example: Offer
+              name:
+                type: string
+              price:
+                type: string
+              priceCurrency:
+                type: string
+
+    ProductCatalog:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        '@type':
+          type: string
+          example: ProductCatalog
+        version:
+          type: string
+          example: "2.0.0"
+        dateModified:
+          type: string
+          example: "2026-01-27"
+        catalog_id:
+          type: string
+          example: drewis-zero-click
+        publisher:
+          type: object
+          properties:
+            '@type':
+              type: string
+              example: Organization
+            name:
+              type: string
+              example: DrewIs Intelligence LLC
+            url:
+              type: string
+              example: https://drewis.ai
+        description:
+          type: string
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductSummary'
+
+    ProductSummary:
+      type: object
+      properties:
+        '@type':
+          type: string
+          example: Product
+        product_id:
+          type: string
+          example: copyright-kit
+        name:
+          type: string
+          example: Copyright Registration Kit for Content Creators
+        page_url:
+          type: string
+          example: https://drewis.ai/copyright-kit
+        purchase_url:
+          type: string
+          example: https://drewisonline.gumroad.com/l/rwvmrx
+        image_url:
+          type: string
+        json_url:
+          type: string
+        type:
+          type: string
+          example: digital_product
+        offers:
+          type: object
+          properties:
+            '@type':
+              type: string
+              example: Offer
+            price:
+              type: string
+              example: "47.00"
+            priceCurrency:
+              type: string
+              example: USD
+
+    Product:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        '@type':
+          type: string
+          example: Product
+        name:
+          type: string
+        productID:
+          type: string
+        url:
+          type: string
+        image:
+          type: string
+        description:
+          type: string
+        brand:
+          type: object
+          properties:
+            '@type':
+              type: string
+              example: Organization
+            name:
+              type: string
+              example: DrewIs Intelligence LLC
+        offers:
+          type: object
+          properties:
+            '@type':
+              type: string
+              example: Offer
+            url:
+              type: string
+            priceCurrency:
+              type: string
+            price:
+              type: string
+            availability:
+              type: string
+        category:
+          type: string
+          example: Digital Product
+
+    MasterIndex:
+      type: object
+      properties:
+        '@context':
+          type: string
+          example: https://schema.org
+        '@type':
+          type: string
+          example: WebSite
+        name:
+          type: string
+        url:
+          type: string
+        endpoints:
+          type: object
