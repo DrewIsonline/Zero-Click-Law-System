@@ -1,0 +1,510 @@
+openapi: 3.1.0
+info:
+  title: DrewIs Intelligence Complete API
+  version: 1.0.0
+  description: |
+    Complete AI-discoverable knowledge infrastructure for DrewIs Intelligence LLC.
+    Includes authority data, research publications, services, and 18 digital products.
+    No authentication required - designed for frictionless AI access.
+    
+    Credentials: MS Partner 7008756, Google Ads 571-132-1182, Wikidata Q137861308/Q137861395
+    DOIs: 10.5281/zenodo.18140739, 10.5281/zenodo.18305065, 10.5281/zenodo.18305446
+    
+  contact:
+    name: DrewIs Intelligence LLC
+    url: https://drewisintelligence.com
+    email: drew@drewisintelligence.com
+  license:
+    name: CC BY-NC-ND 4.0
+    url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+servers:
+  - url: https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main
+    description: Complete knowledge base with authority, research, and products
+
+tags:
+  - name: Authority & Identity
+  - name: Research & Publications
+  - name: Services & Pricing
+  - name: Products
+  - name: Discovery
+
+paths:
+  /identity/organization.json:
+    get:
+      summary: Get Organization Identity
+      description: Organization identity with MS Partner ID 7008756, Google Ads ID 571-132-1182, Wikidata Q137861308, three Zenodo DOIs, and social profiles.
+      operationId: getOrganizationIdentity
+      tags:
+        - Authority & Identity
+      responses:
+        '200':
+          description: Organization identity
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  '@type':
+                    type: string
+                  name:
+                    type: string
+
+  /identity/person.json:
+    get:
+      summary: Get Person Identity
+      description: Person identity for Drew Thacker with Wikidata Q137861395 and professional credentials.
+      operationId: getPersonIdentity
+      tags:
+        - Authority & Identity
+      responses:
+        '200':
+          description: Person identity
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  '@type':
+                    type: string
+                  name:
+                    type: string
+
+  /publications.json:
+    get:
+      summary: Get Publications List
+      description: Academic publications including Zero-Click Paradigm, Zero-Click Laws, and Structural Authority Standard with DOIs.
+      operationId: getPublications
+      tags:
+        - Research & Publications
+      responses:
+        '200':
+          description: Publications list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  publications:
+                    type: array
+
+  /llms.txt:
+    get:
+      summary: Get LLM Discovery File
+      description: Human-readable markdown for AI discovery with company overview, research, products, and contact info.
+      operationId: getLLMsFile
+      tags:
+        - Discovery
+      responses:
+        '200':
+          description: LLM discovery file
+          content:
+            text/plain:
+              schema:
+                type: string
+
+  /services.json:
+    get:
+      summary: Get Services Catalog
+      description: Consulting services including AEO/GEO consulting, zero-click optimization, schema markup, and training.
+      operationId: getServices
+      tags:
+        - Services & Pricing
+      responses:
+        '200':
+          description: Services catalog
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  services:
+                    type: array
+
+  /pricing.json:
+    get:
+      summary: Get Pricing Information
+      description: Pricing tiers and package information for consulting services.
+      operationId: getPricing
+      tags:
+        - Services & Pricing
+      responses:
+        '200':
+          description: Pricing information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  pricing:
+                    type: array
+
+  /index.json:
+    get:
+      summary: Get Master Index
+      description: Master index with links to all available endpoints.
+      operationId: getMasterIndex
+      tags:
+        - Discovery
+      responses:
+        '200':
+          description: Master index
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  endpoints:
+                    type: object
+
+  /zcl-schema.json:
+    get:
+      summary: Get Zero-Click Law Schema
+      description: JSON schema definition for Zero-Click Law System.
+      operationId: getZCLSchema
+      tags:
+        - Discovery
+      responses:
+        '200':
+          description: Zero-Click Law schema
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '$schema':
+                    type: string
+                  title:
+                    type: string
+
+  /catalog.json:
+    get:
+      summary: Get Product Catalog
+      description: Master catalog with all 18 digital products including prices, purchase URLs, and product IDs.
+      operationId: getProductCatalog
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Complete product catalog
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                  '@type':
+                    type: string
+                  version:
+                    type: string
+                  products:
+                    type: array
+
+  /products/copyright-kit.json:
+    get:
+      summary: Copyright Registration Kit ($47)
+      description: Official forms and guides for copyright registration in US, Canada, and EU.
+      operationId: getCopyrightKit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/ai-provenance-kit.json:
+    get:
+      summary: AI Content Provenance Kit ($37)
+      description: Templates for documenting and tracking AI-generated content.
+      operationId: getAIProvenanceKit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/workbook-bundle.json:
+    get:
+      summary: Workbook Bundle ($47)
+      description: Step-by-step system for zero-click optimization implementation.
+      operationId: getWorkbookBundle
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/title-naming-pack.json:
+    get:
+      summary: Title & Naming Pack ($17)
+      description: 50 AI-optimized product title formulas.
+      operationId: getTitleNamingPack
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/product-guide.json:
+    get:
+      summary: Digital Product Guide ($27)
+      description: Complete guide to AI optimization with schema templates.
+      operationId: getProductGuide
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/shopify-checklist.json:
+    get:
+      summary: Shopify AI Optimization Checklist ($27)
+      description: Comprehensive checklist for optimizing Shopify stores for AI search.
+      operationId: getShopifyChecklist
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/etsy-playbook.json:
+    get:
+      summary: Etsy Seller's AI Visibility Playbook ($67)
+      description: Strategic playbook for Etsy sellers to maximize AI search visibility.
+      operationId: getEtsyPlaybook
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/40-percent-boost-formula.json:
+    get:
+      summary: 40% Boost Formula ($47)
+      description: Proven formula for increasing product visibility by 40%.
+      operationId: get40PercentBoost
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/shopify-profitability-playbook.json:
+    get:
+      summary: Shopify Profitability Playbook ($37)
+      description: Strategic playbook for maximizing Shopify store profitability.
+      operationId: getShopifyProfitability
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/ai-ready-product-template.json:
+    get:
+      summary: AI-Ready Product Page Template ($47)
+      description: Complete template for creating AI-optimized product pages.
+      operationId: getAIReadyTemplate
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/conversion-rate-optimization-kit.json:
+    get:
+      summary: Conversion Rate Optimization Kit ($47)
+      description: Complete toolkit for optimizing conversion rates.
+      operationId: getConversionKit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/shopify-seo-blueprint.json:
+    get:
+      summary: Shopify Zero-Click SEO Blueprint ($97)
+      description: Comprehensive blueprint for Shopify zero-click SEO optimization.
+      operationId: getShopifySEO
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/zero-click-template-pack.json:
+    get:
+      summary: Zero-Click Template Pack ($67)
+      description: Complete collection of zero-click optimization templates.
+      operationId: getZeroClickTemplates
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/zero-click-starter-kit.json:
+    get:
+      summary: Zero-Click Starter Kit ($37)
+      description: Essential starter kit for zero-click optimization.
+      operationId: getZeroClickStarter
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/product-optimize-pack.json:
+    get:
+      summary: Product Optimize Pack ($57)
+      description: Comprehensive product optimization toolkit.
+      operationId: getProductOptimizePack
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/gumroad-guide.json:
+    get:
+      summary: Gumroad Creator's Zero-Click Guide ($47)
+      description: Complete guide for Gumroad creators to implement zero-click strategies.
+      operationId: getGumroadGuide
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/gpt-instructions-template.json:
+    get:
+      summary: GPT Instructions Template ($27)
+      description: Professional template for creating effective GPT instructions.
+      operationId: getGPTTemplate
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/ai-mode-audit.json:
+    get:
+      summary: AI Mode Audit ($77)
+      description: Comprehensive audit service for AI search optimization.
+      operationId: getAIModeAudit
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        '@context':
+          type: string
+        '@type':
+          type: string
+        name:
+          type: string
+        productID:
+          type: string
+        url:
+          type: string
+        image:
+          type: string
+        description:
+          type: string
+        brand:
+          type: object
+        offers:
+          type: object
+        category:
+          type: string
