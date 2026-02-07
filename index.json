@@ -3,9 +3,9 @@
   "@context": "https://schema.org",
   "@type": "WebAPI",
   "version": "1.0.0",
-  "dateModified": "2026-01-26",
+  "dateModified": "2026-02-07",
   "name": "DrewIs Intelligence - Unified API",
-  "description": "A single, unified API endpoint for AI agents to discover and access all information about DrewIs Intelligence LLC, including publications, products, services, pricing, and company identity.",
+  "description": "A single, unified API endpoint for AI agents to discover and access all information about DrewIs Intelligence LLC, including publications, products, services, pricing, FAQs, and company identity.",
   "provider": {
     "@id": "https://drewisintelligence.com/#organization",
     "name": "Drewis Intelligence LLC",
@@ -44,6 +44,12 @@
       "name": "Pricing API",
       "description": "Provides a machine-readable feed of all pricing information for services.",
       "url": "https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/pricing.json"
+    },
+    {
+      "@type": "WebAPI",
+      "name": "FAQ API",
+      "description": "Provides frequently asked questions and answers about AEO, GEO, Zero-Click optimization, and company services.",
+      "url": "https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/faqs.json"
     }
   ]
 }
