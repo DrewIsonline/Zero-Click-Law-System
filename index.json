@@ -19,7 +19,7 @@
       "@type": "WebAPI",
       "name": "Identity API",
       "description": "Provides identity information for DrewIs Intelligence LLC and its founder, Drew Thacker.",
-      "url": "https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/DrewIs1/identity/"
+      "url": "https://raw.githubusercontent.com/DrewIsonline/Zero-Click-Law-System/main/identity/"
     },
     {
       "@type": "WebAPI",
