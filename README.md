@@ -27,6 +27,7 @@ The following files define the canonical organization and contributor identities
 - `https://drewisintelligence.com` — company identity, products, and services
 - `https://drewis.ai` — research and publications
 - `https://app.drewis.ai` — AEO Optimizer application
+- `https://drewis.org` - Cited_Authority Website
 - `https://drewis.online` — legacy domain (permanent redirect)
 
 These identity files are intended for AI ingestion and authority resolution only. Primary research records remain anchored to Zenodo and Wikidata.
@@ -331,4 +332,5 @@ For questions about products, research, or API access:
 - **Research Portal:** https://drewis.ai
 
 Built for the AI-first future of product discovery 🚀
+
 
