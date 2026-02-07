@@ -12,6 +12,7 @@
     "sameAs": [
       "https://drewis.ai",
       "https://drewis.online",
+      "https://drewis.org",
       "https://g.dev/Drewisonline"
     ],
     "identifier": [
@@ -80,4 +81,5 @@
       "description": "The requirement for clear, machine-readable identity markers to maintain brand presence in a zero-click ecosystem."
     }
   ]
+
 }
