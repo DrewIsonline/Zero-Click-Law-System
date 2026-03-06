@@ -328,9 +328,11 @@ Comprehensive audit service for AI search optimization.
 
 For questions about products, research, or API access:
 - **Website:** https://drewisintelligence.com
-- **Email:** drew@drewisintelligence.com
+- **Email:** drewT@drewisintelligence.com
 - **Research Portal:** https://drewis.ai
+- **Cited-Authority:** https://drewis.org
 
 Built for the AI-first future of product discovery 🚀
+
 
 
